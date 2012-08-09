@@ -35,11 +35,6 @@
                     </modules>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>com.jelastic</groupId>
-                <artifactId>jelastic-maven-plugin</artifactId>
-                <version>1.6</version>
-            </plugin>
         </plugins>
     </build>
 
