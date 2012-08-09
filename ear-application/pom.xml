@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.mydomain</groupId>
+        <artifactId>ejb-parent</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>com.mydomain</groupId>
+    <artifactId>ear-application</artifactId>
+    <version>1.0</version>
+    <packaging>ear</packaging>
+    <name>ear-application</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <modules>
+                        <webModule>
+                            <groupId>com.hivext</groupId>
+                            <artifactId>web-client</artifactId>
+                            <contextRoot>/example-ejb</contextRoot>
+                        </webModule>
+                        <ejbModule>
+                            <groupId>com.mydomain</groupId>
+                            <artifactId>ejb-service</artifactId>
+                        </ejbModule>
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mydomain</groupId>
+            <artifactId>ejb-service</artifactId>
+            <version>1.0</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>com.hivext</groupId>
+            <artifactId>web-client</artifactId>
+            <version>1.0</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+</project>
