@@ -13,6 +13,7 @@
         <module>ejb-service</module>
         <module>web-client</module>
         <module>ear-application</module>
+        <module>gf-client</module>
     </modules>
     <dependencyManagement>
         <dependencies>
